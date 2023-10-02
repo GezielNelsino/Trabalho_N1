@@ -1,0 +1,91 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: rgb(207, 219, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    aspect-ratio: 1/1;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 3px 5px rgb(107, 107, 107), 0px 3px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;   
+    height: 50%;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+}
+
+.imagem{
+    margin-top: 8%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    height: 88px;
+}
+
+.user_input {
+    height: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.user_input input{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 8px;
+    height: 50%;
+    width: 72%;
+    padding-left: 2%;
+}
+
+.botoes {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botoes button{
+    border: 0;
+    border-radius: 8px;
+    height: 50%;
+    width: 72%;
+    background-color: rgb(11, 45, 197);
+    color: rgb(255, 255, 255);
+}
+
+.botoes button:hover{    
+    cursor: pointer;
+    background-color: rgb(33, 71, 241);
+    transition: background-color 0.2s linear;
+}
+
+#eye{
+    border-radius: 100px;
+    position: absolute;
+    right: 16%;
+}
+
+#eye:hover{
+    background-color: rgb(206, 206, 206);
+}

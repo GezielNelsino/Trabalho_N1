@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de viagens">
+    <meta name="author" content="Geziel Nelsino F. da Silva">
+    <title>Avioes</title>
+    <link rel="stylesheet" href="assets/css/estiloAvioes.css">
+    <link rel="icon" href="assets/imagens/telegram.png">
+    <script defer src="assets/script/animations.js">
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="showOptions" class="notVisible" onclick="navBarAnimation();">
+            <hr class="lines" id="r1">
+            <hr class="lines" id="r2">
+        </div>
+
+        <nav id="categorias" class="notVisible">
+            <a href="#infoVoo" onclick="navBarAnimation()">
+                Viajar
+                <img src="assets/svg/icons/earth.svg" alt="emoji terra">
+            </a>
+            <a href="#pacotes" onclick="navBarAnimation()">
+                Pacotes
+                <img src="assets/svg/icons/marker.svg" alt="emoji marcador">
+            </a>
+            <a href="./imagens.html">
+                Imagens
+                <img src="assets/svg/icons/picture.svg" alt= "emoji imagem" >
+            </a>
+            <a>
+                <div id="nome"></div>
+                <img src="assets/svg/icons/user.svg" alt="emoji usuario">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="secao" id="infoVoo">
+            <object id="mapa" data="assets/svg/map.svg" type="image/svg+xml" onload="setMapEvents()"></object>
+            <div id="formulario">
+                <form class="caixa">
+                    <span>Origem</span>
+                    <select onchange="validaPais(true)" id="origem" name="origem">
+                        <option value="none" selected disabled hidden>Selecione uma opção</option>
+                        <option value="africa">África</option>
+                        <option value="america">America</option>
+                        <option value="mato">Mato Grosso</option>
+                        <option value="minas">Minas Gerais</option>
+                        <option value="pascoa">Páscoa</option>
+                        <option value="nlogonia">Nlogonia</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
+
+                    <span>Destino</span>
+                    <select onchange="validaPais(false)" id="destino" name="destino">
+                        <option value="none" selected disabled hidden>Selecione uma opção</option>
+                        <option value="africa">África</option>
+                        <option value="america">America</option>
+                        <option value="mato">Mato Grosso</option>
+                        <option value="minas">Minas Gerais</option>
+                        <option value="pascoa">Páscoa</option>
+                        <option value="nlogonia">Nlogonia</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
+                    <span>Data</span>
+                    <input type="date" name="date" id="data">
+                    <button id="confirmar">Confirmar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="secao" id="pacotes">
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_pascoa.png" alt="Páscoa">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 1999.00</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_america.png" alt="America">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 1000.00</div>
+                </div>
+            </div>
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_africa.png" alt="África">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 2999.00</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_mato.png" alt="Mato Grosso">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 19.90</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_tocantins.png" alt="Tocantins">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 300.00</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_minas.png" alt="Minas Gerais">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 1999.00</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <img src="assets/imagens/label/lq_nlogonia.png" alt="Nlogonia">
+                <div class="descricao">
+                    <span>Só por</span>
+                    <div class="preco">R$ 100000.00</div>
+                </div>
+            </div>
+
+            <div class="conteudoDoPacote">
+                <div id="moreImgs">
+                    <a href="./imagens.html" id="plus">+</a>
+                    <img src="assets/imagens/label/lq_seeMore.png" alt="Ver mais">
+                </div>
+                <div class="descricao">
+                    <a href="./imagens.html" id="seeMore">Ver mais imagens</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Página feita por Geziel N zap
+    </footer>
+</body>
+
+</html>

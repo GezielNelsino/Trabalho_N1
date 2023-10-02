@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de viagens">
+    <meta name="author" content="Geziel Nelsino F. da Silva">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/estiloInicio.css">
+    <link rel="icon" href="assets/imagens/telegram.png">
+</head>
+
+<body>
+    <main>
+        <div class="imagem">
+            <img id="logo" src="assets/imagens/telegram.png" alt="Logo">
+        </div>
+        <form action='/avioes.html'>
+            <div class="user_input">
+                <input id="user_name" type="text" placeholder="Nome">
+            </div>
+            <div class="user_input">
+                <input type="password" id="user_password" placeholder="Senha">
+                <img id="eye" src="assets/svg/icons/eye.svg" alt="Senha"
+                onclick = "document.querySelector('#user_password').setAttribute('type',document.querySelector('#user_password').getAttribute('type')=='text'?'password':'text')">
+            </div>
+            <div class="botoes">
+                <button 
+                onclick="
+                    var inputEmail= document.getElementById('user_name');
+                    sessionStorage.setItem('nome', inputEmail.value);">
+                    Seguinte
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
