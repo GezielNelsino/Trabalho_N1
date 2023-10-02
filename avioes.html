@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    
+    <!-- Barra de navegacao -->
     <header>
         <div id="showOptions" class="notVisible" onclick="navBarAnimation();">
             <hr class="lines" id="r1">
@@ -33,7 +35,11 @@
                 Imagens
                 <img src="assets/svg/icons/picture.svg" alt= "emoji imagem" >
             </a>
-            <a>
+            <a href="./sobre.html">
+                Sobre
+                <img src="assets/svg/icons/lamp.svg" alt= "emoji lampada" >
+            </a>
+            <a href="./index.html">
                 <div id="nome"></div>
                 <img src="assets/svg/icons/user.svg" alt="emoji usuario">
             </a>
@@ -42,7 +48,10 @@
 
     <main>
         <div class="secao" id="infoVoo">
+            <!-- Mapa (arquivo externo) -->
             <object id="mapa" data="assets/svg/map.svg" type="image/svg+xml" onload="setMapEvents()"></object>
+            
+            <!-- Paises -->
             <div id="formulario">
                 <form class="caixa">
                     <span>Origem</span>
@@ -75,6 +84,7 @@
             </div>
         </div>
 
+        <!-- pacotes de vendas -->
         <div class="secao" id="pacotes">
             <div class="conteudoDoPacote">
                 <img src="assets/imagens/label/lq_pascoa.png" alt="Páscoa">
@@ -144,8 +154,9 @@
         </div>
     </main>
 
+    <!-- Fim -->
     <footer>
-        Página feita por Geziel N zap
+        Página feita por Geziel N
     </footer>
 </body>
 

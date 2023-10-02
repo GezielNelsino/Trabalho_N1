@@ -7,6 +7,7 @@ const packageOptions = document.querySelector("#pacotes");
 var origem = null;
 var destino = null;
 
+//Essa aplicacao eh ficticia e nao esta de acordo com a realidade
 const paises = {
     africa: {
         nome: "África",
@@ -31,27 +32,30 @@ const paises = {
     },
 };
 
-function changeMenu(categoria) {
-    let cat = document.querySelector(`#${categoria}`);
-    cat.className = cat.className != "visible" ? "visible" : "notVisible";
-}
-
+//Funcao que serve para controlar a animcao da navbar
 function navBarAnimation() {
-    changeMenu("categorias");
+    let cat = document.querySelector(`#categorias`);
+    cat.className = cat.className != "visible" ? "visible" : "notVisible";
     showOptions.className = showOptions.className == "active" ? "" : "active";
 }
 
+//funcoes que mudam os paises selecionado
 function changeOrigin(element, color, value, origin) {
     element.setAttribute("fill", color);
     inputOrigem.value = value;
     origem = origin;
 }
+
 function changeDestiny(element, color, value, destiny) {
     element.setAttribute("fill", color);
     inputDestino.value = value;
     destino = destiny;
 }
 
+/*
+funcao que atribui eventos aos paises 
+e adiciona o html ao JSON dos paises
+*/
 function setMapEvents() {
     let list = document
         .querySelector(`object`)
@@ -74,6 +78,7 @@ function setMapEvents() {
     });
 }
 
+//funcao para quando um pais for selecionado ao clicar
 function validaPais(ehAOrigem) {
     if (ehAOrigem) {
         if (origem == null && inputOrigem.value != destino) {
@@ -101,6 +106,7 @@ function validaPais(ehAOrigem) {
     }
 }
 
+//Adicionar caracteristica de scroll nos pacotes
 if (packageOptions != null) {
     packageOptions.addEventListener("wheel", (event) => {
         event.preventDefault();
@@ -110,4 +116,9 @@ if (packageOptions != null) {
     });
 }
 
-document.getElementById("nome").innerText = sessionStorage.getItem("nome");
+//funcao de colocar o nome do usuario
+function setUserName(){
+    if(document.getElementById("nome")!=null)
+    document.getElementById("nome").innerText = sessionStorage.getItem("nome")!=""?sessionStorage.getItem("nome"):'Login';
+}
+setUserName();
